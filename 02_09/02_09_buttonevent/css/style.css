@@ -17,6 +17,7 @@
 #wrap header .wrap .right-box nav .main-btn-wrap > li {float: left;font-size: 20px;background-color: rgba(255, 255, 0, .2);width: 180px;height: 50px;line-height: 50px;text-align: center;}
 #wrap header .wrap .right-box nav .main-btn-wrap > li > a {display: block;width: 100%;height: 100%;position: relative;}
 #wrap header .wrap .right-box nav .main-btn-wrap > li > a:hover {background: rgba(255, 0, 0, .2);color: #fff;transition: all .5s ease-in-out;}
+#wrap header .wrap .right-box nav .main-btn-wrap > li > a.on {background:rgba(255, 0, 0, .2);}
 
 /* 효과 */
 #wrap header .wrap .right-box nav .main-btn-wrap > li > a span{display:inline-block;width:100%;position:absolute;left: 0;}
@@ -26,8 +27,9 @@
 #wrap header .wrap .right-box nav > .main-btn-wrap > li > a:hover span.ko{transition: .5s;transform:rotateX(0deg)}
 
 /* 네비 서브 */
-#wrap header .wrap .right-box nav .main-btn-wrap li > .sub {display: none;}
-#wrap header .wrap .right-box nav .main-btn-wrap li:hover > .sub {display: block;}
+#wrap header .wrap .right-box nav .main-btn-wrap li > .sub {width: 100%;height: 0;transition: all .2s ease-in;overflow: hidden;}
+#wrap header .wrap .right-box nav .main-btn-wrap li > .sub.on {height: 120px;transition: all .4s ease-in-out;}
+/* #wrap header .wrap .right-box nav .main-btn-wrap li:hover > .sub {display: block;} */
 #wrap header .wrap .right-box nav .main-btn-wrap li > .sub ul {width: 100%;}
 #wrap header .wrap .right-box nav .main-btn-wrap li > .sub ul li {width: 180px;height: 30px;line-height: 30px;text-align: center;font-size: 15px;background:#f7f7f7;}
 #wrap header .wrap .right-box nav .main-btn-wrap li > .sub ul li a {display: block;width: 100%;height: 100%;}
