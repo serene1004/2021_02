@@ -179,9 +179,9 @@
                 </div>
                 <div class="column column3">
                     <div class="gap">
-                        <div class="banner1"><a href="#" class="banner-btn"></a></div>
-                        <div class="banner2"><a href="#" class="banner-btn"></a></div>
-                        <div class="banner3"><a href="#" class="banner-btn"></a></div>
+                        <div><a href="#" class="banner-btn"></a></div>
+                        <div><a href="#" class="banner-btn"></a></div>
+                        <div><a href="#" class="banner-btn"></a></div>
                     </div>
                 </div>
             </section>
@@ -189,7 +189,7 @@
         <!-- 푸터 -->
         <footer id="footer" class="clearfix">
             <div class="left-wrap">
-                <address>경기도 성남시 분당구 불정로 6 (우)13561</address>
+                <address></address>
             </div>
             <div class="right-wrap">
                 <div class="top-wrap">
@@ -197,21 +197,21 @@
                         <span><a href="https://www.facebook.com/" class="sns-btn"><i class="fab fa-facebook-square" title="facebook"></i></a></span>
                         <span><a href="https://twitter.com/?lang=ko" class="sns-btn"><i class="fab fa-twitter" title="twitter"></i></a></span>
                         <span><a href="https://www.instagram.com/" class="sns-btn"><i class="fab fa-instagram" title="instagram"></i></a></span>
-                        <span><a href="https://www.google.co.kr/" class="sns-btn"><i class="fab fa-google" title="google"></i></a></span>
-                        <span><a href="https://www.naver.com/" class="sns-btn"><i class="fas fa-kiwi-bird" title="kiwi-bird"></i></a></span>
+                        <span><a href="https://www.youtube.co.kr/" class="sns-btn"><i class="fab fa-youtube" title="youtube"></i></a></span>
                     </div>
                 </div>
                 <div class="bottom-wrap">
                     <div class="gap">
                         <!-- <form name="폼이름" id="폼이름" method="전송방식" action="응답하는서버사이드스크립트"> -->
-                        <form name="familyForm" id="familyForm" method="" action="response.php">
+                        <form name="familyForm" id="familyForm" method="post" action="response.php"> <!-- method="get" 방식도있으나 보안상 좋지않음. post방식을 권장-->
                             <!-- 셀렉트박스는 반드시 클릭이벤트를 onchange를 사용한다 -->
-                            <select name="family" id="family" onchange="goFamily(familyForm.family.value);">
-                                <option value="">Family Site</option>
-                                <option value="https://www.bok.or.kr/museum/main/main.do">한국은행 화폐박물관</option>
-                                <option value="http://www.bok.or.kr/portal/main/main.do">한국은행</option>
-                                <option value="https://museum.komsco.com/museum">조폐공사 화폐박물관</option>
-                                <option value="https://www.komsco.com/kor">조폐공사</option>
+                            <!-- <select name="family" id="family" onchange="goFamily(familyForm.family.value);"> -->
+                            <select name="family" id="family">
+                                <option value="" selected>Family Site</option>
+                                <option value="https://www.naver.com">Naver</option>
+                                <option value="http://www.daum.co.kr">Daum</option>
+                                <option value="https://www.google.co.kr">Google</option>
+                                <option value="https://www.youtube.co.kr">Youtube</option>
                             </select>
                         </form>
                     </div>

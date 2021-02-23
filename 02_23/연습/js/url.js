@@ -108,3 +108,8 @@ function goUrl(z){
         return false;
     }
 };
+
+// 패밀리사이트 점프메뉴(자바스크립트 스타일. form태그내 select태그에서 onchange="goFamily(familyForm.family.value);")
+// function goFamily(z){
+//     location.href=z;
+// };

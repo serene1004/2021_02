@@ -5,8 +5,10 @@
             var that = this;
 
             that.navFn();
+            that.mainSlideFn();
             that.noticeFn();
             that.galleryFn();
+            that.familySiteFn();
         },
 
         // 네비게이션(메뉴) 함수
@@ -34,6 +36,56 @@
             })
 
         }, // 네비게이션 함수 끝
+
+        // 메인슬라이드 함수
+        mainSlideFn:function(){
+
+            var $slideWrap = $('#section1 .slide-wrap');
+            var $prevBtn = $('#section1 .prev-btn')
+            var $nextBtn = $('#section1 .next-btn')
+            var cnt = 0;
+
+            // 메인슬라이드
+            function mainSlideFn() {
+                $slideWrap.stop().animate({
+                    left: -1000 * cnt
+                }, 600, function () {
+                    if (cnt > 3) cnt = 0;
+                    if (cnt < 0) cnt = 3;
+                    $slideWrap.stop().animate({
+                        left: -1000 * cnt
+                    }, 0);
+                });
+            }
+            // 다음슬라이드
+            function nextSlideCountFn() {
+                cnt += 1;
+                mainSlideFn();
+            }
+            // 이전슬라이드
+            function prevSlideCountFn() {
+                cnt -= 1;
+                mainSlideFn();
+            }
+            // 다음버튼
+            $nextBtn.on({
+                click: function () {
+
+                    if (!$slideWrap.is(':animated')) {
+                        nextSlideCountFn();
+                    }
+                }
+            });
+            // 이전버튼
+            $prevBtn.on({
+                click: function () {
+                    if (!$slideWrap.is(':animated')) {
+                        prevSlideCountFn();
+                    }
+                }
+            });
+
+        },  // 메인슬라이드함수 끝
 
         // 모달창 함수
         noticeFn: function () {
@@ -113,6 +165,20 @@
             });
 
         },  // 갤러리함수 끝
+
+        // 패밀리사이트 함수
+        familySiteFn:function(){
+
+            var $family = $('#footer #family')
+
+            $family.on({
+                change:function(){
+                    var x = $(this).val();
+                    location.href = x ;
+                }
+            });
+
+        },  // 패밀리사이트 함수 끝
 
     };
 

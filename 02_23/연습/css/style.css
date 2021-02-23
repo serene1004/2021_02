@@ -88,13 +88,24 @@
 
 /* 섹션2 오른쪽박스 */
 #wrap #main #section2 .box-wrap .right-box {width: 33.333%;height: 250px;background: rgba(255, 255, 0, .3);float: left;}
+#wrap #main #section2 .box-wrap .right-box .gap {background: #fff;width: auto;height: 220px;margin: 15px;}
+#wrap #main #section2 .box-wrap .right-box .gap  div {width: auto;height: 33.33%;}
+
 
 /* 푸터 */
 #wrap #footer {width: 1000px;height: 100px;background: rgba(0, 255, 0, .1);float: left;}
 #wrap #footer .left-box {width: 800px;height: 100px;background: rgba(0, 255, 0, .1);float: left;}
 #wrap #footer .right-box {width: 200px;height: 100px;background: rgba(255, 255, 0, .1);float: left;}
+
+/* SNS */
 #wrap #footer .right-box .top-box {width: 200px;height: 50px;background: rgba(0, 255, 0, .2);}
+#wrap #footer .right-box .top-box .gap {text-align: center;}
+#wrap #footer .right-box .top-box .gap span {display: inline-block;line-height: 45px;}
+#wrap #footer .right-box .top-box .gap span a {display: inline-block;font-size: 30px;}
+
+/* 패밀리사이트 */
 #wrap #footer .right-box .bottom-box {width: 200px;height: 50px;background: rgba(0, 255, 0, .4);}
+#wrap #footer .right-box .bottom-box .gap {text-align: center;}
 
 /* 모달창(팝업창) */
 #modal {display: none;z-index: 4;position: fixed;top: 0;left: 0;;width: 100%;height: 100%;background:rgba(0, 0, 0, .3);}
